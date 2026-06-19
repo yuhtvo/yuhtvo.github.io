@@ -1,0 +1,49 @@
+# Site settings
+title: Thuy Vo [shui]
+author: Thuy Vo
+description: "Learn deep. Think deeper"
+baseurl: "" 
+url: "https://yuhtvo.github.io"
+date_format: "%b %d, %Y"
+
+include: ["_pages"]
+
+# Phân trang Server-side (cho trang Blog chính)
+paginate: 10
+paginate_path: "/blog/:num/"
+
+# Google Analytics
+google_analytics: G-08BQPM114Q
+
+# Social usernames (Dùng để gọi trong các file layout)
+github_username: yuhtvo
+substack_username: yuhtvo
+instagram_username: hongthuy.0503
+linkedin_username: hongthuyvo
+email: hongthuy0536@gmail.com
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Collections
+collections:
+  reviews:
+    output: true
+    permalink: /reviews/:name/
+  portfolio:
+    output: true
+    permalink: /portfolio/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+  en:
+    output: true
+  vi:
+    output: true 
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude: [vendor, Gemfile, Gemfile.lock, node_modules]
