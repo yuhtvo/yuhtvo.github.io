@@ -381,23 +381,25 @@ h3 {
 .posts {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0;
     margin-top: 4rem;
+    max-width: 760px;
 }
 
 .post-item {
-    background: white;
-    border-radius: 18px;
-    padding: 2rem;
-    border: 1px solid #e8e8e8;
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
+    background: transparent;
+    border-radius: 0;
+    padding: 0 0 3rem 0;
+    margin-bottom: 3rem;
+
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+
+    transition: none;
 }
 .post-item:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.06);
+    transform: none;
+    box-shadow: none;
 }
 .post-item:last-child {
     border-bottom: none;
@@ -406,7 +408,9 @@ h3 {
 .post-item .post-date {
     font-size: .85rem;
     color: #888;
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
+
+    display: block;
 }
 
 .post-item .post-title {
@@ -416,24 +420,23 @@ h3 {
 }
 
 .post-item .post-title a {
-    display: inline-block;
+    display: inline;
     transition:
-        color .2s ease,
-        transform .2s ease;
+        color .2s ease;
 }
 
 .post-item .post-title a:hover {
     color: #555;
-    transform: translateX(4px);
+    transform: none;
     opacity: 1;
 }
 
 .post-excerpt {
     font-size: 1rem;
-    color: #666;
-    line-height: 1.8;
-    margin-top: .75rem;
-    max-width: 90%;
+    color: #444;
+    line-height: 1.7;
+    margin-top: .5rem;
+    max-width: 100%;
 }
 
 .empty-state {
