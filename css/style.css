@@ -313,6 +313,11 @@ nav ul li a:hover::after {
     color: #666;
 }
 
+.tags-label {
+    color: #666;
+    font-weight: 700;
+}
+
 /* Featured Image */
 .post-featured-image {
     margin: 4rem 0;
