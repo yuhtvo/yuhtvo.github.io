@@ -257,14 +257,27 @@ nav ul li a:hover::after {
     line-height: 1.6;
 }
 .post-title a {
+    position: relative;
     text-decoration: none;
-    text-underline-offset: 6px;
-    text-decoration-thickness: 1px;
+    color: var(--text);
+    padding-bottom: 4px;
 }
 
 
-.post-title a:hover {
-    text-decoration: underline;
+.post-title a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--text);
+    transition: width 0.25s ease;
+}
+
+
+.post-title a:hover::after {
+    width: 100%;
 }
 
 
