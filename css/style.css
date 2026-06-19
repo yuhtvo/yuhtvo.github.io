@@ -16,6 +16,9 @@
     --radius: 12px;
     --transition: .25s ease;
 }
+footer {
+    margin-top: auto;
+}
 
 /* 2. BASE STYLES */
 html {
