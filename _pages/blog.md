@@ -63,6 +63,7 @@ permalink: /blog/
   <div class="pagination-wrapper">
     <button id="prev" class="nav-btn">← Previous</button>
     <span id="page-number"></span>
+        pageNumber.textContent = `${currentPage} / ${totalPages}`;
     <button id="next" class="nav-btn">Next →</button>
   </div>
   {% endif %}
