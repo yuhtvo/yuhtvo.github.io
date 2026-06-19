@@ -15,7 +15,7 @@ title: Home
                 &amp; agile.
             </h1>
             <p class="hero-subtitle">
-                Finance &amp; Economics Undergraduate
+                A Finance &amp; Economics Undergraduate
             </p>
         </div>
 
