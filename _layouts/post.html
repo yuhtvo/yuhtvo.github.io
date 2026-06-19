@@ -79,9 +79,12 @@
             </div>
             {% if page.tags %}
             <div class="post-tags">
+                <span class="tags-label">
+                    Tags:
+                </span>
                 {% for tag in page.tags %}
                 <span class="post-tag">
-                    {{ tag }}
+                    {{ tag }}{% unless forloop.last %}, {% endunless %}
                 </span>
                 {% endfor %}
             </div>
