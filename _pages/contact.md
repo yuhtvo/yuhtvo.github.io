@@ -4,7 +4,8 @@ title: Contact
 permalink: /contact/
 ---
 
-# Contact me
+# Say hello!
+### I'd love to get in touch with you and welcome any feedback.
 
 <section class="contact-page">
 
