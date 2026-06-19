@@ -256,6 +256,17 @@ nav ul li a:hover::after {
     max-width: 75%;
     line-height: 1.6;
 }
+.post-title a {
+    text-decoration: none;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1px;
+}
+
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
 
 /* Language Switcher */
 .lang-switch {
