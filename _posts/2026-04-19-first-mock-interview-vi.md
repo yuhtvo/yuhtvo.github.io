@@ -3,8 +3,9 @@ layout: post
 title: "What My First Mock Interview Taught Me"
 excerpt: "Dù bạn làm công việc gì đi nữa, hãy đặt mục tiêu trở thành Master trong lĩnh vực đó"
 date: 2026-04-19
-category: misc
+category: blog
 lang: vi
+tag: interview
 ref: first-mock-interview
 footer: "Buổi phỏng vấn thử này diễn ra vào ngày 5/2/2026."
 ---
