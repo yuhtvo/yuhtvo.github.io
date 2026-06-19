@@ -6,15 +6,7 @@ permalink: /contact/
 
 # Contact me
 
----
-layout: default
-title: Contact
-permalink: /contact/
----
-
 <section class="contact-page">
-
-  <h1 class="contact-title">Contact</h1>
 
     <div class="business-card">
         <div class="card-avatar">
@@ -58,11 +50,9 @@ permalink: /contact/
                    target="_blank">
                     GitHub
                 </a>
-
+                
             </div>
-
         </div>
-
     </div>
 
 </section>
