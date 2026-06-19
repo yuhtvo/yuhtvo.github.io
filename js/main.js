@@ -61,7 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (totalPages <= 1) {
         posts.forEach(post => post.classList.remove("hidden"));
-        if (paginationWrapper) paginationWrapper.remove();
+    
+        if (prevBtn) {
+            prevBtn.disabled = true;
+            prevBtn.classList.add("disabled");
+        }
+    
+        if (nextBtn) {
+            nextBtn.disabled = true;
+            nextBtn.classList.add("disabled");
+        }
+    
+        if (pageNumber) {
+            pageNumber.textContent = `Page 1 / 1`;
+        }
+    
         return;
     }
 
