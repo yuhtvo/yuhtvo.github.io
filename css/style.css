@@ -1,25 +1,23 @@
-/* ==========================================================================
-   1. FONTS & VARIABLES
-   ========================================================================== */
+/* 1. FONTS & VARIABLES */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700;800&family=Montserrat:wght@400;500;600&family=Sanchez&display=swap');
 
 :root {
     --bg: #f5f5f5;
     --text: #111;
-    --text-muted: #666;
-    --border: #111;
+    --text-muted: #6b6b6b;
+    --border: #d8d8d8;
 
     --font-heading: 'League Spartan', sans-serif;
     --font-body: 'Montserrat', sans-serif;
     --font-accent: 'Sanchez', serif;
 
-    --max-width: 800px;
-    /* Độ rộng tối ưu để đọc bài viết */
+    --max-width: 920px;
+   
+    --radius: 12px;
+    --transition: .25s ease;
 }
 
-/* ==========================================================================
-   2. BASE STYLES
-   ========================================================================== */
+/* 2. BASE STYLES */
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -33,27 +31,26 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
     background: var(--bg);
     color: var(--text);
+
     font-family: var(--font-body);
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.8;
+
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 main {
     display: block;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem 2rem 6rem;
 }
 
 hr {
-    border: none;
-    border-top: 2px solid var(--text);
-    max-width: var(--max-width);
-    margin: 3rem auto;
-    opacity: 0.15;
+   display: none;
 }
 
 /* Links */
@@ -67,9 +64,7 @@ a:hover {
     opacity: 0.65;
 }
 
-/* ==========================================================================
-   3. NAVIGATION (Global Global Navbar)
-   ========================================================================== */
+/* 3. NAVIGATION */
 nav {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -86,16 +81,40 @@ nav ul {
 }
 
 nav ul li a {
+    position: relative;
+
     font-family: var(--font-body);
     font-weight: 500;
     font-size: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    padding-bottom: 4px;
 }
 
-/* ==========================================================================
-   4. POST CONTAINER (Detailed Post Layout)
-   ========================================================================== */
+nav ul li a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1.5px;
+
+    background: var(--text);
+
+    transition: width 0.25s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* 4. POST CONTAINER */
 .post-container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -108,19 +127,19 @@ nav ul li a {
 
 .post-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(3rem, 7vw, 5rem);
     font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin: 0 0 1rem 0;
+    line-height: .95;
+    letter-spacing: -0.05em;
+    margin: 1.25rem;
 }
 
 .post-subtitle {
     font-family: var(--font-accent);
     font-size: 1.35rem;
     color: var(--text-muted);
-    margin: 0 0 1.5rem 0;
-    line-height: 1.4;
+    max-width: 75%;
+    line-height: 1.6;
 }
 
 /* Language Switcher */
@@ -169,24 +188,24 @@ nav ul li a {
 }
 
 .post-tag {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    background: rgba(0, 0, 0, 0.05);
-    padding: 0.2rem 0.6rem;
-    text-transform: lowercase;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: .3rem .8rem;
+    font-size: .75rem;
+    color: var(--text-muted);
 }
 
 /* Featured Image */
 .post-featured-image {
-    margin: 0 calc(5% - 5%) 3rem calc(5% - 5%);
-    padding: 0;
+    margin: 4rem 0;
 }
 
 .post-featured-image img {
     width: 100%;
     display: block;
     height: auto;
+    border-radius: 14px;
 }
 
 figcaption {
@@ -201,11 +220,23 @@ figcaption {
 .post-content {
     font-family: var(--font-body);
     font-size: 1.1rem;
-    line-height: 1.75;
+    line-height: 2;
+    color: #222;
 }
 
 .post-content p {
     margin-bottom: 1.75rem;
+}
+.post-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-top: 4rem;
+}
+
+.post-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-top: 3rem;
 }
 
 /* Embed Layout */
@@ -228,9 +259,7 @@ figcaption {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
-   5. BLOG ARCHIVE (Home / Blog List Grid)
-   ========================================================================== */
+/* 5. BLOG ARCHIVE */
 h1 {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 6vw, 4.5rem);
@@ -251,12 +280,12 @@ h3 {
 .posts {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .post-item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3rem;
 }
 
 .post-item:last-child {
@@ -272,17 +301,19 @@ h3 {
 }
 
 .post-item .post-title {
-    font-size: 1.75rem;
-    margin: 0.5rem 0;
+    font-size: 2rem;
+    line-height: 1.1;
 }
 
 .post-item .post-title a {
     border-bottom: 2px solid transparent;
+    transition: all .25s ease;
 }
 
 .post-item .post-title a:hover {
-    border-bottom-color: var(--text);
+    color: #000;
     opacity: 1;
+    padding-left: 4px;
 }
 
 .post-excerpt {
@@ -310,19 +341,17 @@ h3 {
 }
 
 .nav-btn {
-    background: transparent;
-    border: 2px solid var(--border);
-    color: var(--text);
-    padding: 0.6rem 1.2rem;
-    font-family: var(--font-body);
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: .8rem 1.4rem;
+    background: white;
+    transition: all var(--transition);
 }
 
 .nav-btn:hover {
+    transform: translateY(-2px);
     background: var(--text);
-    color: var(--bg);
+    color: white;
 }
 
 #page-number {
@@ -330,9 +359,7 @@ h3 {
     font-size: 1rem;
 }
 
-/* ==========================================================================
-   6. CONTACT PAGE (Business Card Component)
-   ========================================================================== */
+/* 6. CONTACT PAGE (Business Card Component) */
 .contact-page {
     max-width: 700px;
     margin: 4rem auto;
@@ -350,23 +377,18 @@ h3 {
 
 /* Minimalist Business Card */
 .business-card {
-    display: flex;
-    background: #ffffff;
-    border: 3px solid var(--border);
-    box-shadow: 8px 8px 0px 0px var(--text);
-    /* Hiệu ứng Neo-brutalism nhẹ */
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
     padding: 3rem;
-    gap: 3rem;
+    gap: 2.5rem;
     align-items: center;
 }
 
 .card-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid var(--border);
-    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border: none;
 }
 
 .card-avatar img {
@@ -389,18 +411,14 @@ h3 {
 }
 
 .card-name {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0;
-    line-height: 1;
+    font-size: 3rem;
+    letter-spacing: -0.04em;
 }
 
 .card-divider {
-    height: 2px;
-    background: var(--text);
-    margin: 1.5rem 0;
-    width: 60px;
+    width: 48px;
+    height: 1px;
+    background: var(--border);
 }
 
 /* Contact Social Links Grid */
@@ -416,16 +434,16 @@ h3 {
     font-weight: 500;
     display: inline-flex;
     align-items: center;
+    color: var(--text-muted);
+    transition: color .2s ease;
 }
 
 .contact-item:hover {
-    text-decoration: underline;
-    opacity: 1;
+    color: var(--text);
+    text-decoration: none;
 }
 
-/* ==========================================================================
-   7. RESPONSIVE DESIGN (Media Queries)
-   ========================================================================== */
+/* 7. RESPONSIVE DESIGN */
 
 /* Tablet & Smaller Screens */
 @media (max-width: 768px) {
@@ -435,7 +453,7 @@ h3 {
     }
 
     hr {
-        margin: 2rem auto;
+        display: none;
     }
 
     .business-card {
@@ -479,7 +497,7 @@ h3 {
     }
 }
 
-/* Class hỗ trợ ẩn bài viết khi phân trang */
+/* 8. PAGINATION */
 .post-item.hidden {
     display: none !important;
 }
