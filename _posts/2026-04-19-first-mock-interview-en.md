@@ -3,8 +3,9 @@ layout: post
 title: "What My First Mock Interview Taught Me"
 excerpt: "Whatever job you do, aim to be a master of it."
 date: 2026-04-19
-category: misc
+category: blog
 lang: en
+tag: interview
 ref: first-mock-interview
 footer: "This mock interview was held on February 5, 2026."
 ---
