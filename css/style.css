@@ -243,14 +243,14 @@ nav ul li a:hover::after {
 .post-title {
     font-family: var(--font-heading);
     font-size: clamp(3rem, 7vw, 5rem);
-    font-weight: 600;
+    font-weight: 500;
     line-height: .95;
     letter-spacing: -0.05em;
     margin: 1.25rem 0;
 }
 
 .post-subtitle {
-    font-family: var(--font-accent);
+    font-family: var(--font-body);
     font-size: 1.35rem;
     color: var(--text-muted);
     max-width: 75%;
