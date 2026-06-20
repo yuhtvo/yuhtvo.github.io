@@ -24,7 +24,6 @@ title: Home
             <img
                 src="/images/home-illustration.png"
                 alt="Illustration">
-            -->
         </div>
     </div>
 
