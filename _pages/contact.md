@@ -30,7 +30,7 @@ permalink: /contact/
             <div class="contact-items">
 
                 <a href="mailto:hongthuy0536@gmail.com" class="contact-item">
-                    ✉ hongthuy0536@gmail.com
+                    Email
                 </a>
 
                 <a href="https://www.linkedin.com/in/hongthuyvo/"
