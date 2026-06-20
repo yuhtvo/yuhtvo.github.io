@@ -21,10 +21,8 @@ title: Home
 
         <div class="hero-image">
 
-            <!-- Chèn illustration tại đây -->
-            <!--
             <img
-                src="/assets/images/profile-illustration.png"
+                src="/images/home-illustration.png"
                 alt="Illustration">
             -->
         </div>
