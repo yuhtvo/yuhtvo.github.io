@@ -11,9 +11,8 @@ permalink: /contact/
 
     <div class="business-card">
         <div class="card-avatar">
-            <!-- Thay bằng ảnh hoặc illustration -->
             <img
-                src="{{ '/images/profile.png' | relative_url }}"
+                src="{{ '/images/card-profile.png' | relative_url }}"
                 alt="Profile">
         </div>
 
